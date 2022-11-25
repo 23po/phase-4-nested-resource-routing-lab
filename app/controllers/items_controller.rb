@@ -15,17 +15,7 @@ class ItemsController < ApplicationController
       return render json: items, include: :user
   end 
 
-  # def index
-  #   if params[:user_id]
-  #     user = User.find_by!(id: params[:user_id])
-  #     items = user.items
-  #     return  render json: items
-  #   else
-  #     items = Item.all
-  #     return render json: items, include: :user
-  #   end
-    
-  # end
+
 
   def show
     item = Item.find_by!(id: params[:id])
